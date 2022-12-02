@@ -48,7 +48,8 @@ const prerequisites = [
     // .then(function(data))
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-
+//fs.writeFileSync( file, data, options )
+console.log("README.md succesfully generated.")
 //Description
 // TODO: Create a function to initialize app
 function init() {
@@ -60,3 +61,4 @@ inquirer.prompt(prerequisites)
 
 // Function call to initialize app
 init();
+
