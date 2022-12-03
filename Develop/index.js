@@ -33,6 +33,11 @@ const prerequisites = [
       },
       {
         type: 'input',
+        message: 'Message the github or email below with any questions.',
+        name: 'Questions',
+      },
+      {
+        type: 'input',
         message: 'Please enter your github username.',
         name: 'Github',
       },
@@ -48,7 +53,7 @@ const prerequisites = [
     // .then(function(data))
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-//fs.writeFileSync( file, data, options )
+fs.writeFileSync("README.md", generateMarkdown(data));
 console.log("README.md succesfully generated.")
 //Description
 // TODO: Create a function to initialize app
