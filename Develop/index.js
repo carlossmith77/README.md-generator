@@ -53,34 +53,19 @@ const prerequisites = [
     // .then(function(data))
 // TODO: Create a function to write README file
 function writeToFile( data) {
-  fs.writeFileSync("README.md", generateMarkdown.js(data));
+  fs.writeFileSync("README.md" , generateMarkdown (data));
 console.log("README.md succesfully generated.")
 }
 
-//Description
-// TODO: Create a function to initialize app
-function init() {
-inquirer.prompt(prerequisites)
-.then((event)=>console.log(event))
 
 
-}
+
 
 // Function call to initialize app
- 
-// .then(prerequisites => {
-//   return generateMarkdown(prerequisites);
-// })
-// .then(data => {
-//   return writeToFile(data);
-// }) 
-// .catch(err => {
-//   console.log(err)
-// })
 
 function init() {
-  inquirer.prompt(prerequisites)
-  .then((event)=>console.log(event))
-  writeToFile(event)
-  
-  }
+  inquirer.prompt(prerequisites).then((event)=>{
+    // console.log(event)
+    writeToFile(event)
+  })}
+init();
