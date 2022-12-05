@@ -23,7 +23,7 @@ const prerequisites = [
       },
       {
         type: 'input',
-        message: 'what is the real world use cae for this product?',
+        message: 'what is the real world use case for this product?',
         name: 'Use-case',
       },
       {
@@ -52,9 +52,11 @@ const prerequisites = [
     // .prompt(prerequisites)
     // .then(function(data))
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-fs.writeFileSync("README.md", generateMarkdown.js(data));
+function writeToFile(fileName, data) {
+  fs.writeFileSync("README.md", generateMarkdown.js(data));
 console.log("README.md succesfully generated.")
+}
+
 //Description
 // TODO: Create a function to initialize app
 function init() {
@@ -65,5 +67,14 @@ inquirer.prompt(prerequisites)
 }
 
 // Function call to initialize app
-init();
+ 
+.then(prerequisites => {
+  return generateMarkdown(prerequisites);
+})
+.then(data => {
+  return writeToFile(data);
+}) 
+.catch(err => {
+  console.log(err)
+})
 
