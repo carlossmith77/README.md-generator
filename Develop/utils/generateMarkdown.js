@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   
   ## Use-case
 
-  ${data.use-cases}
+  ${data.usecase}
 
   ## Licenses
 
@@ -58,10 +58,10 @@ function generateMarkdown(data) {
 
   ## Contact-info
 
-  ${data.contact-info}
+  ${data.contactinfo}
   
   
 `;
 }
 
-
+module.exports = generateMarkdown;
