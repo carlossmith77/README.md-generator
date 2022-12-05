@@ -81,6 +81,6 @@ inquirer.prompt(prerequisites)
 function init() {
   inquirer.prompt(prerequisites)
   .then((event)=>console.log(event))
-  writeToFile("event")
+  writeToFile(event)
   
   }
