@@ -53,7 +53,7 @@ const prerequisites = [
     // .then(function(data))
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-fs.writeFileSync("README.md", generateMarkdown(data));
+fs.writeFileSync("README.md", generateMarkdown.js(data));
 console.log("README.md succesfully generated.")
 //Description
 // TODO: Create a function to initialize app
